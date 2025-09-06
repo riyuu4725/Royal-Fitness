@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f2027, #a1adb1, #2c5364);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+   /* Example using a Pexels or Pixabay image URL */
+  background:url("images/gym.webp")
+              no-repeat center center fixed;
+  background-size: cover;
+    }
+    
+    .form-container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 30px;
+      border-radius: 15px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #f1c40f;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+    .form-group input, 
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+    }
+    .form-group input:focus {
+      border: 2px solid #f1c40f;
+    }
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background: #f1c40f;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #d4ac0d;
+    }
+    .error {
+      color: #e74c3c;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Gym Registration</h2>
+    <form id="gymForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your full name">
+        <div class="error" id="nameError"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email ID</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <div class="error" id="emailError"></div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter phone number">
+        <div class="error" id="phoneError"></div>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <div class="error" id="genderError"></div>
+      </div>
+      <div class="form-group">
+        <label for="plan">Membership Plan</label>
+        <select id="plan">
+          <option value="">Select Plan</option>
+          <option>Monthly</option>
+          <option>Quarterly</option>
+          <option>Yearly</option>
+        </select>
+        <div class="error" id="planError"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">Create Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <div class="error" id="passwordError"></div>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('gymForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      let valid = true;
+
+      // Clear previous errors
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+      // Validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const gender = document.getElementById('gender').value;
+      const plan = document.getElementById('plan').value;
+      const password =  document.getElementById('password').value.trim();
+
+      if (name === "") {
+        document.getElementById('nameError').textContent = "Name is required";
+        valid = false;
+      }
+      if (email === "" || !email.includes('@')) {
+        document.getElementById('emailError').textContent = "Valid email is required";
+        valid = false;
+      }
+      if (phone === "" || phone.length < 10) {
+        document.getElementById('phoneError').textContent = "Valid phone number is required";
+        valid = false;
+      }
+      if (gender === "") {
+        document.getElementById('genderError').textContent = "Select gender";
+        valid = false;
+      }
+      if (plan === "") {
+        document.getElementById('planError').textContent = "Select a plan";
+        valid = false;
+      }
+      if (password.length < 6) {
+        document.getElementById('passwordError').textContent = "Password must be at least 6 characters";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Registration Successful! 🎉");
+        form.reset();
+      }
+    });
+  </script>
+</body>
+</html>
