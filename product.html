@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Products</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #638e97;
+    }
+    header {
+      background: black;
+      color:white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .price {
+      color: #e63946;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #111;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #e63946;
+    }
+    .view-btn{
+display: inline-block;
+      padding: 10px 15px;
+      background: #a0570d;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: ;
+    }
+    .view-btn:hover{
+background: #680256;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gym Products</h1>
+  </header>
+
+  <section class="product-container">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="images/whey protein.webp" alt="Protein Powder">
+      <div class="product-info">
+        <h3>Protein Powders</h3>
+        <button class="view-btn">View Products</button>
+      </div>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="images/dumbbels.jpg" alt="Dumbbells">
+      <div class="product-info">
+        <h3>Dumbbells (Set)</h3>
+        <button class="view-btn">View Products</button>
+      </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="images/gym gloves.jpg" alt="Gym Gloves">
+      <div class="product-info">
+        <h3>Gym Gloves</h3>
+        <button class="view-btn">View Products</button>
+      </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="images/yoga mat.webp" alt="Yoga Mat">
+      <div class="product-info">
+        <h3>Yoga Mats</h3>
+        <button class="view-btn">View Products</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
