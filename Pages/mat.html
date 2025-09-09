@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Outdoor - Furniture Haven</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: url('../images/back3.jpg') no-repeat center center/cover;
+      color: #333;
+      font-size: 1rem;
+    }
+
+    header {
+      background-color: #C38E63;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      margin: 0.3rem auto;
+      padding: 0.3rem 0.8rem;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      width: 100%;
+      height: 60px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .logo img {
+      height: 60px;
+      width: 60px;
+    }
+
+    nav {
+      padding: 0.2rem 0.5rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 0.8rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+    }
+
+    nav a:hover {
+      background-color: #e67e22;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .product-card {
+      background-color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.4rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .product-card p {
+      font-size: 1.2rem;
+      color: #e67e22;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .product-card a {
+      background-color: #e67e22;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card a:hover {
+      background-color: #cf711f;
+    }
+
+    .clean-footer {
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 1.5rem;
+  border-top: 2px solid #e67e22;
+  font-size: 0.95rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-nav {
+  margin-top: 0.5rem;
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  color: #e67e22;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.custom-footer {
+  background-color: #2c3e50;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  margin-top: 3rem;
+  font-family: 'Poppins', sans-serif;
+  border-top: 3px solid #e67e22;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #e67e22;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+  color: #f1f1f1;
+}
+
+.footer-creators {
+  font-size: 0.75rem;
+  margin-top: 0.4rem;
+  color: #ccc;
+}  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Mats</h2>
+    
+    <!-- Product Display -->
+    <div class="product-container">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="C:\Users\rajup\OneDrive\Desktop\projectdemo\OIP (6).jpg" alt="man gloves">
+        <h3>thirple mats</h3>
+        <p>₹499</p>
+        <a href="checkout.html?name=Outdoor+Sofa&price=18000">Buy Now</a>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="C:\Users\rajup\OneDrive\Desktop\projectdemo\yoga mat.webp" alt="gloves">
+        <h3>set of mats</h3>
+        <p>₹999</p>
+        <a href="checkout.html?name=Patio+Set&price=22000">Buy Now</a>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="C:\Users\rajup\OneDrive\Desktop\projectdemo\Wholesale-Eco-Friendly-Printable-Elastic-6mm-TPE-1.jpg" alt="armour gloves">
+        <h3>single mat</h3>
+        <p>₹199</p>
+        <a href="checkout.html?name=Outdoor+Lounge+Chair&price=10000">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
